@@ -48,6 +48,7 @@ jobs:
           #Modify the kong.yaml file adapting to Kong Ingress
           yq e '(select(.kind == "Ingress") | .spec.ingressClassName) |= "kong"' -i kong.yaml
           yq e '(select(.kind == "Ingress") | .metadata.annotations."konghq.com/strip-path") = "true"' -i kong.yaml
+          yq e "(select(.kind == \"Ingress\") | .metadata.annotations.\"konghq.com/plugins\") = \"$PROJECT_NAME-cors\"" -i kong.yaml
           # yq e '(select(.kind == "Ingress") | .spec.rules[0].http.paths[0].pathType) = "Prefix"' -i kong.yaml
           yq e "(select(.kind == \"Ingress\") | .spec.rules[0].host) |= \"$HOST_NAME\"" -i kong.yaml
 

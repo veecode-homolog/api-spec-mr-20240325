@@ -53,7 +53,7 @@ jobs:
 
           echo "
           apiVersion: configuration.konghq.com/v1
-          kind: KongClusterPlugin
+          kind: KongPlugin
           metadata:
             name: $PROJECT_NAME-cors
           plugin: cors

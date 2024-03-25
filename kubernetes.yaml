@@ -1,0 +1,42 @@
+
+apiVersion: configuration.konghq.com/v1
+kind: KongPlugin
+metadata:
+  name: api-spec-mr-20240325-cors
+plugin: cors
+config:
+  origins:
+    - https://devportal-homolog.apr.vee.codes
+    - https://devportal.apr.vee.codes
+  credentials: false
+  max_age: 3600
+  preflight_continue: false
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: api-spec-mr-20240325-service-0
+spec:
+  externalName: viacep.com.br
+  type: ExternalName
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: api-spec-mr-20240325
+  annotations:
+    kubernetes.io/ingress.class: kong
+    konghq.com/strip-path: "true"
+spec:
+  rules:
+    - host: vkpr.platform.vee.codes
+      http:
+        paths:
+          - backend:
+              service:
+                name: api-spec-mr-20240325-service-0
+                port:
+                  number: 80
+            pathType: ImplementationSpecific
+            path: /api-spec-mr-20240325
+  ingressClassName: kong

@@ -1,6 +1,6 @@
 
 apiVersion: configuration.konghq.com/v1
-kind: KongClusterPlugin
+kind: KongPlugin
 metadata:
   name: api-spec-mr-20240325-cors
 plugin: cors
@@ -27,6 +27,7 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: kong
     konghq.com/strip-path: "true"
+    konghq.com/plugins: api-spec-mr-20240325-cors
 spec:
   rules:
     - host: vkpr.platform.vee.codes

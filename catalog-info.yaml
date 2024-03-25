@@ -7,8 +7,8 @@ metadata:
     github.com/project-slug: veecode-homolog/api-spec-mr-20240325
     backstage.io/techdocs-ref: dir:.
     github.com/workflows: publish.yml
-    kong-manager/service-name: default.api-spec-mr-20240325.api-spec-mr-20240325-service-0.80
-    kong-manager/instance: /kong-manager/api-spec-mr-20240325
+    kong-manager/service-name: 1067953a-e584-4f6b-a244-a855c5f65a75
+    kong-manager/instance: /kong-manager/api
 spec:
   type: devops
   lifecycle: experimental

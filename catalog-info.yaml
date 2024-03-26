@@ -8,8 +8,8 @@ metadata:
     backstage.io/techdocs-ref: dir:.
     github.com/workflows: publish.yml
     kong-manager/service-name: vkpr.api-spec-mr-20240325-service-0.80
-    #kong-manager/instance: /kong-manager/cluster-veecode
-    kong-manager/instance: /kong-manager/mockbin
+    kong-manager/instance: /kong-manager/cluster-veecode
+    #kong-manager/instance: /kong-manager/mockbin
 spec:
   type: devops
   lifecycle: experimental

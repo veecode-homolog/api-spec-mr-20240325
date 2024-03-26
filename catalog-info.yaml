@@ -8,7 +8,7 @@ metadata:
     backstage.io/techdocs-ref: dir:.
     github.com/workflows: publish.yml
     kong-manager/service-name: app.api-spec-mr-20240325.api-spec-mr-20240325-service-0.80
-    kong-manager/instance: /kong-manager/cluster-veecode
+    kong-manager/instance: /kong-manager/cluster-veecode,/kong-manager/api
 spec:
   type: devops
   lifecycle: experimental

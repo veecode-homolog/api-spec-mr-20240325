@@ -15,7 +15,7 @@ config:
 apiVersion: v1
 kind: Service
 metadata:
-  name: api-spec-mr-20240325-service-0
+  name: app.api-spec-mr-20240325.api-spec-mr-20240325-service-0.80
 spec:
   externalName: viacep.com.br
   type: ExternalName
@@ -35,7 +35,7 @@ spec:
         paths:
           - backend:
               service:
-                name: api-spec-mr-20240325-service-0
+                name: app.api-spec-mr-20240325.api-spec-mr-20240325-service-0.80
                 port:
                   number: 80
             pathType: ImplementationSpecific

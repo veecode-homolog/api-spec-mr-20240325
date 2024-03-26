@@ -30,7 +30,7 @@ metadata:
     konghq.com/plugins: api-spec-mr-20240325-cors
 spec:
   rules:
-    - host: vkpr.platform.vee.codes
+    - host: teste.vkpr.platform.vee.codes
       http:
         paths:
           - backend:
